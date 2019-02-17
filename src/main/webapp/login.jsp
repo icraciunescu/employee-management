@@ -23,17 +23,14 @@
 <body>
 <div style="color:blue">
     <h3>
-<form action="login" method="post">
-
     <div class="login">
         <h1>Login</h1>
-        <form method="post">
-            <input type="text" name="u" placeholder="Username" required="required" />
-            <input type="password" name="p" placeholder="Password" required="required" />
+        <form action="login" method="post">
+            <input type="text" placeholder="Username" required="required" name="un"/>
+            <input type="password" placeholder="Password" required="required" name="pw" />
             <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
         </form>
     </div>
-</form>
     </h3>
 </div>
 </body>
