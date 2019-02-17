@@ -20,12 +20,16 @@
 
 <body>
 <h1>Employees page!</h1>
-<span><c:out value="${employeeService.findById(1).getName()}"/></span>
+
+<span><c:out value="${employeeService.getAll()}"/></span>
+
+<%--<span><c:out value="${employeeService.findById(1).getName()}"/></span>--%>
 <%--<c:forEach items="${employeeService.findById(1)}" var="employee">--%>
     <%--<span><c:out value="${employee.getName()}"/></span>--%>
 <%--</c:forEach>--%>
 <%--<c:forEach items="${userService.findById(1)}" var="user">--%>
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>
 <%--</c:forEach>--%>
-</body>
+
+
 </html>

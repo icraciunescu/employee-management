@@ -26,9 +26,6 @@ public class GenericDao<T> {
         return entity;
     }
 
-
-
-
     public T updateEntity(T entity){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

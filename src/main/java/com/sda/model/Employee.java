@@ -1,13 +1,6 @@
 package com.sda.model;
 
-import org.hibernate.annotations.LazyToOne;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="employees")
@@ -20,6 +13,40 @@ public class Employee {
 
     @Column(name = "name", length = 40)
     private String name;
+
+    @Column (name = "hire_date", length = 40)
+    private String hire_date;
+
+    @Column (name = "department",  length = 40)
+    private String department;
+
+    @Column (name = "manager", length = 40)
+    private String manager;
+
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getManager() {
+        return manager;
+    }
+
+    public void setManager(String manager) {
+        this.manager = manager;
+    }
+
+    public String getHire_date() {
+        return hire_date;
+    }
+
+    public void setHire_date(String hire_date) {
+        this.hire_date = hire_date;
+    }
 
     public Long getId() {
         return id;
@@ -35,5 +62,16 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", hire_date='" + hire_date + '\'' +
+                ", department='" + department + '\'' +
+                ", manager='" + manager + '\'' +
+                '}';
     }
 }

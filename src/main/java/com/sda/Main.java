@@ -8,7 +8,11 @@ public class Main {
 //        User user = new User("admin", "admin");
 //        UserDao userDao = new UserDao();
 //        userDao.createEntity(user);
-//        Employee employee = new Employee();
+//        Employee employee;
+//        employee= new Employee("Ion", "23 02 2018","IT","Cosmin");
+//        System.out.println(employee.toString());
+
+
 //        employee.setName("Cosmin A");
 //          EmployeeDao employeeDao = new EmployeeDao();
 ////          Employee employee = employeeDao.getEntityById(Employee.class, 1L);
@@ -21,6 +25,8 @@ public class Main {
 //        EmployeeDao employeeDao = new EmployeeDao();
 //        List <Employee> employees = employeeDao.getAllEmployees();
 //        System.out.println(employees);
+//        User user = new User("admin", "admin");
+//        UserDao userDao = new UserDao();
 
         EmployeeService employeeService = new EmployeeService();
         System.out.println(employeeService.getAll());
