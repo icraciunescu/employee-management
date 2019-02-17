@@ -20,6 +20,8 @@
 </head>
 
 <body>
+<div style="color:blue">
+    <h3>
 <form action="login" method="post">
 
     Please enter your username
@@ -30,5 +32,7 @@
 
     <input type="submit" value="submit">
 </form>
+    </h3>
+</div>
 </body>
 </html>
