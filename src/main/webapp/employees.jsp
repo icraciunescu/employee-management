@@ -31,6 +31,13 @@
     <span><c:out value="${employee.getDepartment()}"/></span>
     <span><c:out value="${employee.getManager()}"/></span>
 </c:forEach>
+
+<form action="/Employee.dao" method="get">
+    what do you want now ?
+    <button name="subject" type="submit" value="${employeeService.getAll()}">create</button>
+    <button name="subject" type="submit" value="${employeeService.getAll()}">update</button>
+    <button name="subject" type="submit" value="${employeeService.getAll()}">delete</button>
+</form>
 <%--<c:forEach items="${userService.findById(1)}" var="user">--%>
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>
 <%--</c:forEach>--%>
