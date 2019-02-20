@@ -50,7 +50,7 @@
             <td><c:out value="${employee.getHire_date()}"/></td>
             <td><c:out value="${employee.getDepartment()}"/></td>
             <td><c:out value="${employee.getManager()}"/></td>
-            <td><a href="${employeeService.getAll()}">delete</a></td>
+            <td><a href="${employeeService.wantDeleted()}">delete</a></td>
 
             <%--<td><a href="www.google.ro">delete</a></td>--%>
 

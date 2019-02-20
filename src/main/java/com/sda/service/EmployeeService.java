@@ -17,5 +17,10 @@ public class EmployeeService {
         return employeeDao.getAllEmployees();
     }
 
+    //todo
+    public boolean wantDeleted() {
+        return true;
+    }
+
 
 }
