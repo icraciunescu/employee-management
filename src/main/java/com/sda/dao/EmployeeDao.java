@@ -12,7 +12,7 @@ public class EmployeeDao extends GenericDao<Employee> {
     public List getAllEmployees() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        List<Employee> employees = session.createQuery("FROM Employee").list();
+        List<Employee> employees = session.createQuery("FROM Employee WHERE want_deleted = 'isNotDeleted'").list();
         transaction.commit();
         session.close();
 

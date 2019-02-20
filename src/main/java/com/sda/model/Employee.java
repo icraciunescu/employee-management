@@ -23,6 +23,9 @@ public class Employee {
     @Column (name = "manager", length = 40)
     private String manager;
 
+    @Column (name = "want_deleted", length = 40)
+    private String want_deleted;
+
 
     public String getDepartment() {
         return department;
@@ -64,6 +67,14 @@ public class Employee {
         this.name = name;
     }
 
+    public String getWant_deleted() {
+        return want_deleted;
+    }
+
+    public void setWant_deleted(String want_deleted) {
+        this.want_deleted = want_deleted;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -72,6 +83,7 @@ public class Employee {
                 ", hire_date='" + hire_date + '\'' +
                 ", department='" + department + '\'' +
                 ", manager='" + manager + '\'' +
+                ", want_deleted='" + want_deleted + '\'' +
                 '}';
     }
 }
