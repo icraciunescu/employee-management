@@ -1,3 +1,10 @@
+--%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+         pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<jsp:useBean id="departmentService" class="com.sda.service.DepartmentService"></jsp:useBean>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +26,11 @@
         <form action="/AddEmployee" method="post">
             <input type="text" placeholder="Name" required="required" name="name"/>
             <input type="text" placeholder="Hire-Date" required="required" name="hire-date"/>
-            <input type="text" placeholder="Department" required="required" name="department"/>
+            <select name="depid">
+                <c:forEach var="department" items="${departmentService.findAll()}">
+                    <option value="${department.getId()}"> ${department.getName()}</option>
+                </c:forEach>
+            </select>
             <input type="text" placeholder="Manager" required="required" name="manager"/>
             <button type="submit" class="btn btn-primary btn-block btn-large">Add</button>
         </form>

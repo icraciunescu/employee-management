@@ -52,7 +52,7 @@
             <td><c:out value="${employee.getId()}"/></td>
             <td><c:out value="${employee.getName()}"/></td>
             <td><c:out value="${employee.getHire_date()}"/></td>
-            <td><c:out value="${employee.getDepartment()}"/></td>
+            <td><c:out value="${employee.getDepartment().getName()}"/></td>
             <td><c:out value="${employee.getManager()}"/></td>
             <td><a href="${employeeService.wantDeleted()}">delete</a></td>
 

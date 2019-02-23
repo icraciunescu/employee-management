@@ -7,7 +7,7 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost/employees_management</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">password</property>
-        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <mapping class="com.sda.model.User"/>
         <mapping class="com.sda.model.Employee"/>

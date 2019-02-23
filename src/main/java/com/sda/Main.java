@@ -1,5 +1,6 @@
 package com.sda;
 
+import com.sda.dao.DepartmentDao;
 import com.sda.dao.EmployeeDao;
 import com.sda.dao.UserDao;
 import com.sda.model.Department;
@@ -15,12 +16,14 @@ public class Main {
         userDao.createEntity(user);
 
         Department department= new Department();
-        department.getEmployees();
+        department.setName("It");
+        DepartmentDao departmentDao= new DepartmentDao();
+        departmentDao.createEntity(department);
 
         Employee employee= new Employee();
 
         employee.setName("Cosmin A");
-
+        employee.setDepartment(department);
         EmployeeDao employeeDao = new EmployeeDao();
          employeeDao.createEntity(employee);
 

@@ -21,15 +21,6 @@ public class Department {
         return id;
     }
 
-    @Override
-    public String toString() {
-        return "Department{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", employees=" + employees +
-                '}';
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
