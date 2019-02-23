@@ -22,7 +22,7 @@
 <h1>Employees page!</h1>
 
 <input type="button" value="Add Employee"
-       onclick="window.location.href='ad.jsp';return false;"
+       onclick="window.location.href='add-employee-form.jsp';return false;"
        class="add-employee-button"
 />
 <%--<span><c:out value="${employeeService.getAll()}"/></span>--%>

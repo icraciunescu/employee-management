@@ -16,25 +16,12 @@
     </div>
     <div id="container"></div>
         <h3>Add Employee</h3>
-        <form action="employees.jsp" method="GET">
-            <input type="hidden" name="command" value="ADD"/>
-            <table>
-                <tbody>
-                <tr>
-                    <td><label>Name:</label></td>
-                    <td><input type="text" name="name"></td>
-                    <td><label>Hire date:</label></td>
-                    <td><input type="text" name="Hire Date"></td>
-                    <td><label>Department:</label></td>
-                    <td><input type="text" name="Department"></td>
-                    <td><label>Manager:</label></td>
-                    <td><input type="text" name="Manager"></td>
-                    <td><label></label></td>
-                    <td><input type="submit" value="Save"></td>
-                </tr>
-                </tbody>
-            </table>
-
+        <form action="/AddEmployee" method="post">
+            <input type="text" placeholder="Name" required="required" name="name"/>
+            <input type="text" placeholder="Hire-Date" required="required" name="hire-date"/>
+            <input type="text" placeholder="Department" required="required" name="department"/>
+            <input type="text" placeholder="Manager" required="required" name="manager"/>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Add</button>
         </form>
         <div style="clear: both;"></div>
         <p>

@@ -1,6 +1,0 @@
-<html>
-
-<body>
-hello from placeholder
-</body>
-</html>

@@ -17,8 +17,9 @@ public class Employee {
     @Column (name = "hire_date", length = 40)
     private String hire_date;
 
-    @Column (name = "department",  length = 40)
-    private String department;
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    private Department department;
 
     @Column (name = "manager", length = 40)
     private String manager;
@@ -26,12 +27,11 @@ public class Employee {
     @Column (name = "want_deleted", length = 40)
     private String want_deleted;
 
-
-    public String getDepartment() {
+    public Department getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(Department department) {
         this.department = department;
     }
 
