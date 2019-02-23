@@ -54,7 +54,10 @@
             <td><c:out value="${employee.getHire_date()}"/></td>
             <td><c:out value="${employee.getDepartment().getName()}"/></td>
             <td><c:out value="${employee.getManager()}"/></td>
-            <td><a href="${employeeService.wantDeleted()}">delete</a></td>
+            <td><form action="employees" method="post">
+                <input type="text" hidden="true" name="id" value="${employee.getId()}"/>
+                <button type="submit" class="btn btn-primary btn-block btn-large">delete</button>
+            </form></td>
 
             <%--<td><a href="www.google.ro">delete</a></td>--%>
 
@@ -64,9 +67,9 @@
 
 
 <form action="/EmployeeService" method="get">
-    what do you want now ?
-    <button name="subject" type="submit" value="${employeeService.getAll()}">create</button>
-    <button name="subject" type="submit" value="${employeeService.getAll()}">update</button>
+    <%--what do you want now ?--%>
+    <%--<button name="subject" type="submit" value="${employeeService.getAll()}">create</button>--%>
+    <%--<button name="subject" type="submit" value="${employeeService.getAll()}">update</button>--%>
 </form>
 <%--<c:forEach items="${userService.findById(1)}" var="user">--%>
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>

@@ -19,17 +19,13 @@ public class EmployeeService {
     }
 
     public void createEmployee(Employee employee){
-        employee.setWant_deleted("isNotDeleted");
         GenericDao genericDao = new GenericDao();
         genericDao.createEntity(employee);
-
-
-
     }
 
-    //todo
-    public boolean wantDeleted() {
-        return true;
+    public void deleteEmployee(Employee employee){
+        employee.setDelete(true);
+        employeeDao.updateEntity(employee);
     }
 
 

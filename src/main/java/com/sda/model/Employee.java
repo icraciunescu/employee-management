@@ -24,8 +24,8 @@ public class Employee {
     @Column (name = "manager", length = 40)
     private String manager;
 
-    @Column (name = "want_deleted", length = 40)
-    private String want_deleted;
+    @Column (name = "isDeleted", length = 40)
+    Boolean isDelete=false;
 
     public Department getDepartment() {
         return department;
@@ -67,12 +67,12 @@ public class Employee {
         this.name = name;
     }
 
-    public String getWant_deleted() {
-        return want_deleted;
+    public Boolean isDelete() {
+        return isDelete;
     }
 
-    public void setWant_deleted(String want_deleted) {
-        this.want_deleted = want_deleted;
+    public void setDelete(Boolean delete) {
+        isDelete = delete;
     }
 
     @Override
@@ -83,7 +83,7 @@ public class Employee {
                 ", hire_date='" + hire_date + '\'' +
                 ", department='" + department + '\'' +
                 ", manager='" + manager + '\'' +
-                ", want_deleted='" + want_deleted + '\'' +
+                ", want_deleted='" + isDelete() + '\'' +
                 '}';
     }
 }
